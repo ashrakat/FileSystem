@@ -5,10 +5,23 @@ public class File {
 	String name;
 	String type;
 	String location;
-	String size;
+	int size;
 	String creationDate;
 	String lastModificationDate;
 	List<DiskSlot> diskSlots;
+
+	
+	public File(String name, String type, String location, int size, String creationDate, String lastModificationDate,
+			List<DiskSlot> diskSlots) {
+	
+		this.name = name;
+		this.type = type;
+		this.location = location;
+		this.size = size;
+		this.creationDate = creationDate;
+		this.lastModificationDate = lastModificationDate;
+		this.diskSlots = diskSlots;
+	}
 
 	public File() {
 		
@@ -38,11 +51,11 @@ public class File {
 		this.location = location;
 	}
 
-	public String getSize() {
+	public int getSize() {
 		return size;
 	}
 
-	public void setSize(String size) {
+	public void setSize(int size) {
 		this.size = size;
 	}
 
